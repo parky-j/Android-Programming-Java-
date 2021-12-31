@@ -6,9 +6,8 @@
         android:id="@+id/inputlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
         android:layout_above="@+id/buttonLayout"
-        >
+        android:layout_alignParentTop="true">
 
         <EditText
             android:id="@+id/inputMessage"
@@ -28,30 +27,30 @@
             android:id="@+id/inputCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:text="0 / 80 바이트"
             android:textColor="#ffff00ff"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
 
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/buttonLayout"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        >
+        android:orientation="vertical">
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            >
+            android:orientation="horizontal">
+
             <Button
                 android:id="@+id/sendButton"
                 android:layout_width="wrap_content"
@@ -60,8 +59,8 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="전송"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <Button
                 android:id="@+id/closeButton"
                 android:layout_width="wrap_content"
@@ -70,8 +69,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="닫기"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
