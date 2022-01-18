@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             printClientLog("데이터 전송함.");
 
             ObjectInputStream instream = new ObjectInputStream(sock.getInputStream());
-            printClientLog("서버로부터 받음."+instream.readObject());
+            printClientLog("서버로부터 받음: "+instream.readObject());
             sock.close();
         }catch(Exception e){
             e.printStackTrace();
@@ -117,12 +117,12 @@ public class MainActivity extends AppCompatActivity {
 
                 ObjectInputStream instream = new ObjectInputStream(sock.getInputStream());
                 Object obj = instream.readObject();
-                printClientLog("데이터 받음."+obj);
+                printServerLog("데이터 받음: "+obj);
 
                 ObjectOutputStream outstream = new ObjectOutputStream(sock.getOutputStream());
-                outstream.writeObject(obj + "from Server.");
+                outstream.writeObject(obj + "  from Server.");
                 outstream.flush();
-                printClientLog("데이터 보냄.");
+                printServerLog("데이터 보냄.");
                 sock.close();
             }
         }catch(Exception e){
