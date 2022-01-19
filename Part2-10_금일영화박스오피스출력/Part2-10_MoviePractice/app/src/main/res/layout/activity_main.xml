@@ -7,14 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=63aac6b9e03d9658dcaa3d5a08d03af4&#38;targetDt=20210330" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"

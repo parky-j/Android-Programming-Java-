@@ -24,8 +24,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    EditText editText;
     TextView textView;
+    GetUrl url = new GetUrl();
 
     static RequestQueue requestQueue;
 
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText = findViewById(R.id.editText);
         textView = findViewById(R.id.textView);
 
         Button button = findViewById(R.id.button);
@@ -64,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void makeRequest() {
-        String url = editText.getText().toString();
+        GetUrl geturl = new GetUrl();
+        String url = geturl.getUrl();
 
         StringRequest request = new StringRequest(
                 Request.Method.GET,
